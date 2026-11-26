@@ -1,0 +1,48 @@
+:root {
+  --text: #E1D9BC;
+  --text-h: #F0F0DB;
+  --bg: #30364F;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #F0F0DB;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: #F0F0DB;
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  color: var(--text);
+  background: var(--bg);
+}
+
+@mixin flexbox($display: flex, $direction: row, $justify: null, $align: null, $wrap: nowrap) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+#app {
+    @include flexbox(flex, column, center, center);
+}
+
+h1, p {
+  @include flexbox(flex, column, center, center);
+}
+
+.start-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.8rem;
+  background-color: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 12px;
+  cursor:pointer;
+}

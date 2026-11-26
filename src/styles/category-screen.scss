@@ -1,0 +1,23 @@
+@mixin flexbox($display: flex, $direction: row, $justify: null, $align: null, $wrap: nowrap) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+.category-button-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 20px;
+}
+
+.category-button{
+   padding: 40px 80px;
+  font-size: 1.8rem;
+  background-color: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 12px;
+  cursor:pointer;
+}
